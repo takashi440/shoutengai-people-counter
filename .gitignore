@@ -1,0 +1,6 @@
+# 認証情報・ログ・キャッシュ等を除外
+credentials.json
+debug.log
+__pycache__/
+*.log
+yolovenv/
