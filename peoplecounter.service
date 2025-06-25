@@ -1,0 +1,20 @@
+
+---
+
+## 🔸 5. peoplecounter.service（自動起動設定）
+
+```ini
+[Unit]
+Description=People Counter to Google Sheets
+After=network.target
+
+[Service]
+ExecStart=/home/pi/people-counter-raspberrypi/yolovenv/bin/python /home/pi/people-counter-raspberrypi/people_counter_libcam.py
+WorkingDirectory=/home/pi/people-counter-raspberrypi
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
