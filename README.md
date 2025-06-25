@@ -43,3 +43,21 @@ Raspberry Pi + 通常カメラ（例：IMX219）を使い、YOLOv8とDeepSORTに
 
 ## 📦 ディレクトリ構成（例）
 
+people_counter_project/
+├── people_counter_libcam.py # メインスクリプト
+├── debug.log # ログ出力ファイル
+├── yolovenv/ # 仮想環境
+├── deepsort_public/ # DeepSORTライブラリ
+├── credentials.json # Google API認証キー
+└── README.md # ← このファイル
+
+---
+
+## 📝 更新履歴（スクリプト内と同期）
+
+- 2025-06-20: IMX219（960x720）対応、frame_size修正済
+- 2025-06-20: YOLO推論の負荷軽減対応（15FPS・インターバル・軽量モデル）
+- 2025-06-25: person判定ロジックを厳密化（YOLOでpersonと明示されたもののみを「人」としてカウント）
+
+---
+
