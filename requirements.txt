@@ -1,0 +1,7 @@
+opencv-python
+ultralytics
+gspread
+oauth2client
+flask
+psutil
+numpy
